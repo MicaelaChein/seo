@@ -1,0 +1,150 @@
+
+$color1:rgb(107, 107, 150);
+$color2:white;
+$color3:black;
+$color4:rgb(77, 77, 124);
+
+$font1:Verdana, Geneva, Tahoma, sans-serif;
+
+$sm:100px;
+$md:400px;
+$lg:800px;
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: $color3;
+    align-items: flex-start;
+
+  }
+  
+  a:hover{
+    color: $color2;
+  }
+  
+  li {
+    list-style: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  h1, h2 {
+    font-size: 2rem;
+  }
+  
+  li:hover{
+    background-color: $color1;
+    
+  }
+  
+  ul {
+    display: flex;
+  }
+  
+  .container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: $sm $lg $md $md $sm;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header"
+      "Hero Hero"
+      "Section-A Section-B"
+      "Section-C Section-D"
+      "Footer Footer";
+    width: 100%;
+    height: 100%;
+  }
+  
+  .Hero {
+    grid-area: Hero;
+    background-image: url("./img/fondo\ banner\ dos.jpg");
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+      font-family: $font1;
+      color: $color3;
+      font-size: 3rem;
+      text-shadow: $color2 ;
+  }
+  
+  button{
+    font-family: $font1;
+    background-color: $color1;
+    border: 0px;
+    padding: 1rem;
+    color:$color2;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+  }
+  
+.Footer { 
+    background-color: $color1;
+    grid-area: Footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.Header { 
+    grid-area: Header;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: $color1;
+  }
+  
+  .Section-A {
+    background-image: radial-gradient($color4,$color1,$color2);
+    grid-area: Section-A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 20rem;
+     }
+  
+  .Section-B { 
+    grid-area: Section-B;
+    background-image: url("./img/imagen10.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }    
+  
+  .Section-C { 
+    grid-area: Section-C;
+    background-image: url("./img/insumos.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+     }
+  
+  .Section-D {
+    background-image: radial-gradient($color4,$color1,$color2);
+    grid-area: Section-D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20rem;
+    }
+
+
+
+
+
